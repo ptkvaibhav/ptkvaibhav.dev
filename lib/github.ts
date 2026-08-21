@@ -28,6 +28,26 @@ type GitHubReadme = {
   content?: string;
   encoding?: string;
 };
+export type ContributionDay = {
+  contributionCount: number;
+  date: string;
+  color: string;
+};
+
+export type ContributionCalendar = {
+  totalContributions: number;
+  weeks: {
+    contributionDays: ContributionDay[];
+  }[];
+};
+
+export type GithubUserProfile = {
+  publicRepos: number;
+  followers: number;
+  following: number;
+  bio: string;
+};
+
 function getGithubHeaders(): HeadersInit {
   const headers: HeadersInit = {
     Accept: "application/vnd.github+json",
@@ -38,6 +58,73 @@ function getGithubHeaders(): HeadersInit {
   }
 
   return headers;
+}
+
+export async function getGithubUserProfile(): Promise<GithubUserProfile> {
+  try {
+    const data = await fetchGithubJson<{
+      public_repos: number;
+      followers: number;
+      following: number;
+      bio: string;
+    }>(`https://api.github.com/users/${GITHUB_USERNAME}`);
+
+    return {
+      publicRepos: data.public_repos ?? 5,
+      followers: data.followers ?? 2,
+      following: data.following ?? 3,
+      bio: data.bio ?? "",
+    };
+  } catch {
+    return {
+      publicRepos: 5,
+      followers: 2,
+      following: 3,
+      bio: "",
+    };
+  }
+}
+
+export async function getGithubContributions(): Promise<ContributionCalendar | null> {
+  const query = `
+    query {
+      user(login: "${GITHUB_USERNAME}") {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                contributionCount
+                date
+                color
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  try {
+    const response = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        ...getGithubHeaders(),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+      next: { revalidate: REVALIDATE_SECONDS },
+    });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const result = await response.json();
+    return result?.data?.user?.contributionsCollection?.contributionCalendar ?? null;
+  } catch {
+    return null;
+  }
 }
 
 async function fetchGithub(url: string) {

@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project follows semantic versioning for releases when tagged.
 
+## [2.1.0] - 2026-08-21
+
+### Added
+- **Live GitHub GraphQL Contributions & Telemetry**:
+  - Integrated real-time GitHub GraphQL API query for `@ptkvaibhav` contribution calendar, daily commit intensity matrix, and verified open-source statistics.
+  - Paired the live contribution grid directly with the **Projects & Open Source** section to show open-source tools alongside active contribution frequency.
+  - Interactive day hover inspection showing exact contribution dates and counts.
+- **Role-Specific Domain Switcher in Experience**:
+  - Dynamically switches top banner metadata: Guidewire Software displays `Product Security Incident Response • PSIRT`, while Deloitte displays `Application Security Advisory • Top 1% Rating`.
+- **Impeccable Style Edge-to-Edge Visual Polish**:
+  - Upgraded dark mode contrast to WCAG AAA standards with `#F8FAFC` high-luminance text, eliminating dark grey text on dark obsidian backgrounds.
+  - Expanded container canvas to 1280px full-bleed width with animated glowing avatar rings, subtle cyan/emerald ambient drift, and fluid glassmorphic cards.
+  - Clear 6-domain Applied Skills & Production Capabilities matrix (Incident Response & PSIRT, AppSec Governance, Offensive Testing, AI Security Automation, Software Engineering, Cloud Hardening).
+
 ## [2.0.0] - 2026-08-21
 
 ### Added
@@ -38,9 +52,5 @@ and this project follows semantic versioning for releases when tagged.
 
 ---
 
-## [1.0.0] - 2026-04-01
-
-- Initial portfolio launch
-- Security hardening (CSP, strict headers, rate limiting, CSRF validation)
-- Resend email integration & Upstash Redis rate limiting
-- Automated GitHub projects sync
+[2.1.0]: https://github.com/ptkvaibhav/ptkvaibhav/compare/v2.0.0...v2.1.0
+[2.0.0]: https://github.com/ptkvaibhav/ptkvaibhav/compare/v1.0.0...v2.0.0
