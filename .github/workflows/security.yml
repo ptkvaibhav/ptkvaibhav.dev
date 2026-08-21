@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
   schedule:
     - cron: "0 5 * * 1"
 
@@ -28,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Audit production dependencies
-        run: npm audit --production
+        run: npm audit --omit=dev
 
       - name: Generate SBOM
         run: npm run sbom
