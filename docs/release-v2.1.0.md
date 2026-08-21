@@ -23,3 +23,4 @@
 * **Production Dependencies Audit:** `0 vulnerabilities` found (`npm audit --omit=dev`).
 * **Software Bill of Materials (SBOM):** Updated `sbom.json` via CycloneDX (`@cyclonedx/cyclonedx-npm` 5.0.0).
 * **CI Quality Checks:** 100% passing Next.js production builds and zero ESLint warnings.
+

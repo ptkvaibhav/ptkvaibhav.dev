@@ -56,6 +56,10 @@
     @apply bg-background text-foreground antialiased transition-colors duration-300;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-950 dark:text-white tracking-tight;
+  }
+
   ::selection {
     background: rgba(0, 245, 160, 0.3);
     color: #ffffff;
