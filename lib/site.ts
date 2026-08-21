@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Pratik Vaibhav",
-  description: "Application Security Engineer",
-  bio: "6+ years securing enterprise and government systems across application, infrastructure, and DevSecOps environments.",
+  description: "Senior Product Security Engineer (PSIRT) | AppSec & DevSecOps",
+  bio: "Senior Product Security Engineer (PSIRT) at Guidewire Software & ex-Deloitte AppSec Lead. Specializing in security incident response, secret governance, and security automation.",
   email: "ptkvaibhav@gmail.com",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   social: {
