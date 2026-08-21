@@ -12,6 +12,7 @@ import { GithubActivitySection } from "@/components/sections/github-activity";
 import { AwardsSection } from "@/components/sections/awards";
 import { SpotlightCard } from "@/components/ui/spotlight-card";
 import { getFeaturedProjects } from "@/lib/projects";
+import { getGithubContributions, getGithubUserProfile } from "@/lib/github";
 import { typography } from "@/styles/design-system";
 
 export const revalidate = 3600;
@@ -19,7 +20,12 @@ export const revalidate = 3600;
 const resumePath = "/resume/Pratik_Vaibhav_Resume.pdf";
 
 export default async function HomePage() {
-  const projects = await getFeaturedProjects();
+  const [projects, contributionCalendar, githubProfile] = await Promise.all([
+    getFeaturedProjects(),
+    getGithubContributions(),
+    getGithubUserProfile(),
+  ]);
+
   const featuredProject =
     projects.find((project) => project.slug.toLowerCase() === "clinkz") ?? projects[0];
   const supportingProjects = projects
@@ -44,7 +50,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 3. CORE SKILLS & TECHNICAL CAPABILITIES */}
+      {/* 3. CORE SKILLS & APPLIED CAPABILITIES */}
       <section id="skills" className="section">
         <div className="container relative z-10">
           <Reveal>
@@ -55,9 +61,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 4. FLAGSHIP SECURITY PROJECTS & REPOSITORIES */}
+      {/* 4. FLAGSHIP SECURITY PROJECTS & LIVE GITHUB TELEMETRY */}
       <section id="projects" className="section">
-        <div className="container relative z-10 space-y-8">
+        <div className="container relative z-10 space-y-10">
           <Reveal>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
               <div className="space-y-3">
@@ -101,6 +107,16 @@ export default async function HomePage() {
               ))}
             </div>
           </div>
+
+          {/* Real Live GitHub Contribution Graph & Activity Telemetry */}
+          <Reveal>
+            <div className="section-panel p-6 sm:p-8 md:p-10 mt-6">
+              <GithubActivitySection
+                calendar={contributionCalendar}
+                userProfile={githubProfile}
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -115,18 +131,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 6. GITHUB ACTIVITY & CONTRIBUTIONS TELEMETRY */}
-      <section id="github-activity" className="section">
-        <div className="container relative z-10">
-          <Reveal>
-            <div className="section-panel p-6 sm:p-8 md:p-12">
-              <GithubActivitySection />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* 7. AWARDS & NULLCON SPEAKER SPOTLIGHT */}
+      {/* 6. AWARDS & NULLCON SPEAKER SPOTLIGHT */}
       <section id="awards" className="section">
         <div className="container relative z-10">
           <Reveal>
@@ -137,7 +142,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* 8. CONTACT & SECURE INQUIRIES */}
+      {/* 7. CONTACT & SECURE INQUIRIES */}
       <section id="contact" className="section">
         <div className="container relative z-10">
           <Reveal>
@@ -180,3 +185,4 @@ export default async function HomePage() {
     </div>
   );
 }
+
