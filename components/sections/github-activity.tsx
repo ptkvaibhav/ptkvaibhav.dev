@@ -102,6 +102,7 @@ export function GithubActivitySection({ calendar, userProfile }: GithubActivityP
           ) : (
             // Direct Verified Live SVG Heatmap fallback if GraphQL token is omitted in dev
             <div className="flex flex-col items-center justify-center p-4">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://ghchart.rshah.org/00f5a0/${siteConfig.social.github.split("/").pop()}`}
                 alt="GitHub Contribution Calendar"
