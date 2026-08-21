@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Search, Terminal, Download, ShieldCheck, Briefcase, Award, FolderGit2, Mail, Moon, Sun, Volume2, VolumeX, ExternalLink, X, CornerDownLeft } from "lucide-react";
+import { Search, Terminal, Download, ShieldCheck, Briefcase, Award, FolderGit2, Mail, Moon, Sun, Volume2, VolumeX, ExternalLink, X, CornerDownLeft, Sparkles, Activity } from "lucide-react";
 import { useTheme } from "@/components/providers/theme-provider";
 import { useSound } from "@/components/providers/sound-provider";
 import { siteConfig } from "@/lib/site";
@@ -43,24 +43,24 @@ export function CommandPalette() {
     () => [
       {
         id: "nav-about",
-        title: "About & Security Profile",
+        title: "Profile & Identity",
         category: "Navigation",
         icon: ShieldCheck,
         action: () => navigateTo("#about"),
       },
       {
-        id: "nav-skills",
-        title: "Technical Skills & Tooling Arsenal",
-        category: "Navigation",
-        icon: Terminal,
-        action: () => navigateTo("#skills"),
-      },
-      {
         id: "nav-experience",
-        title: "Professional Experience (Deloitte)",
+        title: "Professional Experience (Guidewire & Deloitte)",
         category: "Navigation",
         icon: Briefcase,
         action: () => navigateTo("#experience"),
+      },
+      {
+        id: "nav-skills",
+        title: "Core Skills & Applied Capabilities",
+        category: "Navigation",
+        icon: Sparkles,
+        action: () => navigateTo("#skills"),
       },
       {
         id: "nav-projects",
@@ -68,6 +68,20 @@ export function CommandPalette() {
         category: "Navigation",
         icon: FolderGit2,
         action: () => navigateTo("#projects"),
+      },
+      {
+        id: "nav-console",
+        title: "Live Security Console & Triage Lab",
+        category: "Navigation",
+        icon: Terminal,
+        action: () => navigateTo("#interactive-console"),
+      },
+      {
+        id: "nav-github",
+        title: "GitHub Contributions & Telemetry",
+        category: "Navigation",
+        icon: Activity,
+        action: () => navigateTo("#github-activity"),
       },
       {
         id: "nav-awards",
