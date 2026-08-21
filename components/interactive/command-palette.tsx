@@ -90,7 +90,7 @@ export function CommandPalette() {
         icon: Download,
         action: () => {
           close();
-          window.open(resumePath, "_blank");
+          window.open(resumePath, "_blank", "noopener,noreferrer");
         },
         shortcut: "PDF",
       },
@@ -124,7 +124,7 @@ export function CommandPalette() {
         icon: ExternalLink,
         action: () => {
           close();
-          window.open(siteConfig.social.github, "_blank");
+          window.open(siteConfig.social.github, "_blank", "noopener,noreferrer");
         },
       },
       {
@@ -134,7 +134,7 @@ export function CommandPalette() {
         icon: ExternalLink,
         action: () => {
           close();
-          window.open(siteConfig.social.linkedin, "_blank");
+          window.open(siteConfig.social.linkedin, "_blank", "noopener,noreferrer");
         },
       },
     ],
