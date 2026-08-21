@@ -205,3 +205,4 @@ export function HeroProfileSection({ resumePath = "/resume/pratik-vaibhav-resume
     </section>
   );
 }
+
