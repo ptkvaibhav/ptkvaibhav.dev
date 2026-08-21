@@ -3,9 +3,9 @@
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
   "version": 1,
-  "serialNumber": "urn:uuid:9cf7957c-2d4d-43d4-9a2d-a88dcb1f79c8",
+  "serialNumber": "urn:uuid:d49e62e4-54a8-4a77-941e-316a63d5638b",
   "metadata": {
-    "timestamp": "2026-08-21T07:29:44.286Z",
+    "timestamp": "2026-08-21T07:32:37.039Z",
     "tools": {
       "components": [
         {
@@ -6390,8 +6390,8 @@
     {
       "type": "library",
       "name": "sharp",
-      "version": "0.34.5",
-      "bom-ref": "ptkvaibhav@2.0.0|sharp@0.34.5",
+      "version": "0.35.3",
+      "bom-ref": "ptkvaibhav@2.0.0|sharp@0.35.3",
       "author": "Lovell Fuller",
       "description": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, GIF, AVIF and TIFF images",
       "scope": "optional",
@@ -6403,10 +6403,10 @@
           }
         }
       ],
-      "purl": "pkg:npm/sharp@0.34.5",
+      "purl": "pkg:npm/sharp@0.35.3",
       "externalReferences": [
         {
-          "url": "git://github.com/lovell/sharp.git",
+          "url": "git+https://github.com/lovell/sharp.git",
           "type": "vcs",
           "comment": "as detected from PackageJson property \"repository.url\""
         },
@@ -6421,12 +6421,12 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz",
+          "url": "https://registry.npmjs.org/sharp/-/sharp-0.35.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "3aef48e45b7d58d7026d7ad4f5c3203c17022bc2e2c0ba9c6f2c16dede280d5dfb9f5a73a6e34bb1888057c78e0e78dbb509520f067671411e433e04e781e5b6"
+              "content": "7a3d33547b991870a20015dc3717988694673cd3c072f6c6f1131d0408430312ca9024554a92b7232bbba9bab0dc9333a23d1111e33a7f7b492ed570974d36dd"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -8568,8 +8568,8 @@
     {
       "type": "library",
       "name": "semver",
-      "version": "7.7.4",
-      "bom-ref": "ptkvaibhav@2.0.0|semver@7.7.4",
+      "version": "7.8.5",
+      "bom-ref": "ptkvaibhav@2.0.0|semver@7.8.5",
       "author": "GitHub Inc.",
       "description": "The semantic version parser used by npm.",
       "licenses": [
@@ -8580,7 +8580,7 @@
           }
         }
       ],
-      "purl": "pkg:npm/semver@7.7.4",
+      "purl": "pkg:npm/semver@7.8.5",
       "externalReferences": [
         {
           "url": "git+https://github.com/npm/node-semver.git",
@@ -8598,12 +8598,12 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://registry.npmjs.org/semver/-/semver-7.7.4.tgz",
+          "url": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "bc5282d8812d427561a53efc875629f30cf0adff0233e33328c1c62597c1b738593727111675ec1e4e84e53c4892432c80d4bb99d5f700607bc7640cd9d8b894"
+              "content": "63bfca0ec6fc2e3a28669c1aa86cae94ee8342592c8029dc7211c693eb19218e1206f52870c044147e54af57c8e1d57e26f974c3a723bee71a222e34a6e462a0"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -14916,8 +14916,8 @@
       "type": "library",
       "name": "sharp-win32-x64",
       "group": "@img",
-      "version": "0.34.5",
-      "bom-ref": "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.34.5",
+      "version": "0.35.3",
+      "bom-ref": "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.35.3",
       "author": "Lovell Fuller",
       "description": "Prebuilt sharp for use with Windows x64",
       "scope": "optional",
@@ -14927,7 +14927,7 @@
           "acknowledgement": "declared"
         }
       ],
-      "purl": "pkg:npm/%40img/sharp-win32-x64@0.34.5",
+      "purl": "pkg:npm/%40img/sharp-win32-x64@0.35.3",
       "externalReferences": [
         {
           "url": "git+https://github.com/lovell/sharp.git#npm/win32-x64",
@@ -14945,12 +14945,12 @@
           "comment": "as detected from PackageJson property \"bugs.url\""
         },
         {
-          "url": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz",
+          "url": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.35.3.tgz",
           "type": "distribution",
           "hashes": [
             {
               "alg": "SHA-512",
-              "content": "fb6f5832ca98dbff5e144896f777aa5a7b8b71672e7e8c177b0c123484fa53065d5140ab337a058cc587fd9ebf4cc99be219457a799f0156e959eba9da3af20b"
+              "content": "0f8cb5bcd799ac820908dfae1da595b47f3a07e682add31862389ccbda571ef6c665e1982cb49ddf0755b82dfb171557954d4046c93ce1e2967d631719812abc"
             }
           ],
           "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
@@ -31579,7 +31579,7 @@
         "ptkvaibhav@2.0.0|postcss@8.5.26",
         "ptkvaibhav@2.0.0|react-dom@19.2.7",
         "ptkvaibhav@2.0.0|react@19.2.7",
-        "ptkvaibhav@2.0.0|sharp@0.34.5",
+        "ptkvaibhav@2.0.0|sharp@0.35.3",
         "ptkvaibhav@2.0.0|styled-jsx@5.1.6"
       ]
     },
@@ -31728,7 +31728,7 @@
       "ref": "ptkvaibhav@2.0.0|normalize-package-data@8.0.0",
       "dependsOn": [
         "ptkvaibhav@2.0.0|hosted-git-info@9.0.3",
-        "ptkvaibhav@2.0.0|semver@7.7.4",
+        "ptkvaibhav@2.0.0|semver@7.8.5",
         "ptkvaibhav@2.0.0|validate-npm-package-license@3.0.4"
       ]
     },
@@ -32231,12 +32231,12 @@
       ]
     },
     {
-      "ref": "ptkvaibhav@2.0.0|sharp@0.34.5",
+      "ref": "ptkvaibhav@2.0.0|sharp@0.35.3",
       "dependsOn": [
         "ptkvaibhav@2.0.0|@img/colour@1.1.0",
-        "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.34.5",
+        "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.35.3",
         "ptkvaibhav@2.0.0|detect-libc@2.1.2",
-        "ptkvaibhav@2.0.0|semver@7.7.4"
+        "ptkvaibhav@2.0.0|semver@7.8.5"
       ]
     },
     {
@@ -32424,7 +32424,7 @@
         "ptkvaibhav@2.0.0|make-fetch-happen@14.0.3",
         "ptkvaibhav@2.0.0|nopt@8.1.0",
         "ptkvaibhav@2.0.0|proc-log@5.0.0",
-        "ptkvaibhav@2.0.0|semver@7.7.4",
+        "ptkvaibhav@2.0.0|semver@7.8.5",
         "ptkvaibhav@2.0.0|tar@7.5.22",
         "ptkvaibhav@2.0.0|tinyglobby@0.2.16",
         "ptkvaibhav@2.0.0|node-gyp@11.5.0|which@5.0.0"
@@ -32463,7 +32463,7 @@
       ]
     },
     {
-      "ref": "ptkvaibhav@2.0.0|semver@7.7.4"
+      "ref": "ptkvaibhav@2.0.0|semver@7.8.5"
     },
     {
       "ref": "ptkvaibhav@2.0.0|validate-npm-package-license@3.0.4",
@@ -32593,7 +32593,7 @@
         "ptkvaibhav@2.0.0|@typescript-eslint/visitor-keys@8.59.1",
         "ptkvaibhav@2.0.0|debug@4.4.3",
         "ptkvaibhav@2.0.0|@typescript-eslint/typescript-estree@8.59.1|minimatch@10.2.5",
-        "ptkvaibhav@2.0.0|semver@7.7.4",
+        "ptkvaibhav@2.0.0|semver@7.8.5",
         "ptkvaibhav@2.0.0|tinyglobby@0.2.16",
         "ptkvaibhav@2.0.0|ts-api-utils@2.5.0",
         "ptkvaibhav@2.0.0|typescript@5.9.3"
@@ -32644,7 +32644,7 @@
     {
       "ref": "ptkvaibhav@2.0.0|is-bun-module@2.0.0",
       "dependsOn": [
-        "ptkvaibhav@2.0.0|semver@7.7.4"
+        "ptkvaibhav@2.0.0|semver@7.8.5"
       ]
     },
     {
@@ -33163,7 +33163,7 @@
       "ref": "ptkvaibhav@2.0.0|@img/colour@1.1.0"
     },
     {
-      "ref": "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.34.5"
+      "ref": "ptkvaibhav@2.0.0|@img/sharp-win32-x64@0.35.3"
     },
     {
       "ref": "ptkvaibhav@2.0.0|detect-libc@2.1.2"
@@ -33339,7 +33339,7 @@
     {
       "ref": "ptkvaibhav@2.0.0|node-abi@3.90.0",
       "dependsOn": [
-        "ptkvaibhav@2.0.0|semver@7.7.4"
+        "ptkvaibhav@2.0.0|semver@7.8.5"
       ]
     },
     {
@@ -34439,7 +34439,7 @@
     {
       "ref": "ptkvaibhav@2.0.0|@npmcli/fs@4.0.0",
       "dependsOn": [
-        "ptkvaibhav@2.0.0|semver@7.7.4"
+        "ptkvaibhav@2.0.0|semver@7.8.5"
       ]
     },
     {
